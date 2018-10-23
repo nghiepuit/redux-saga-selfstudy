@@ -3,8 +3,8 @@
     {
       "title": "Learn Redux",
       "description": "Action, reducers, effects",
-      "status": "UNSTARTED",
-      "timer": 0,
+      "status": "COMPLETED",
+      "timer": 24,
       "id": 1
     }
   ]

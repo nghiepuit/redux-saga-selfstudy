@@ -104,9 +104,6 @@ class FlashMessage extends React.Component {
     const { classes, type, message, open } = this.props;
     return (
       <div>
-        <Button className={classes.margin} onClick={this.handleClick}>
-          Open success snackbar
-        </Button>
         <Snackbar
           anchorOrigin={{
             vertical: 'top',

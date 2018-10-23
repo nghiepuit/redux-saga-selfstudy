@@ -64,6 +64,21 @@ export const reducer = (state = initialState, action) => {
         loading: true
       }
     }
+    case types.TIME_INCREMENT: {
+      const nextTasks = state.tasks.map(task => {
+        if (task.id === action.payload.taskId) {
+          return {
+            ...task,
+            timer: task.timer + 1
+          }
+        }
+        return task;
+      });
+      return {
+        ...state,
+        tasks: nextTasks
+      }
+    }
     default:
       return state;
   }

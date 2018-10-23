@@ -39,10 +39,37 @@ export const updateTask = (id, params = {}) => {
     api.updateTask(id, updatedTask)
       .then(res => {
         dispatch(updateTaskSuccess(res.data))
+
+        if (res.data.status === "INPROGRESS") {
+          return dispatch(progressTimerStart(res.data.id));
+        }
+
+        if (task.status === "INPROGRESS") {
+          return dispatch(progressTimerStop(res.data.id));
+        }
+
       })
       .catch(err => {
         dispatch(updateTaskFailed(err));
       });
+  }
+}
+
+export const progressTimerStart = taskId => {
+  return {
+    type: types.TIMER_STARTED,
+    payload: {
+      taskId
+    }
+  }
+}
+
+export const progressTimerStop = taskId => {
+  return {
+    type: types.TIMER_STOPPED,
+    payload: {
+      taskId
+    }
   }
 }
 
