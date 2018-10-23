@@ -1,0 +1,5 @@
+export const TASK_STATUSES = [
+  'UNSTARTED',
+  'INPROGRESS',
+  'COMPLETED'
+];
