@@ -1,15 +1,14 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { withStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
-import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
-import Select from '@material-ui/core/Select';
-import MenuItem from '@material-ui/core/MenuItem';
 import Grid from '@material-ui/core/Grid';
-import {TASK_STATUSES} from './../constants/index';
+import MenuItem from '@material-ui/core/MenuItem';
+import Select from '@material-ui/core/Select';
+import { withStyles } from '@material-ui/core/styles';
+import Typography from '@material-ui/core/Typography';
+import PropTypes from 'prop-types';
+import React from 'react';
+import { TASK_STATUSES } from './../constants/index';
 
 const styles = {
   card: {
@@ -32,7 +31,7 @@ const styles = {
 const Task = props => {
 
   const { classes } = props;
-  const { title, description, status, id } = props.task;
+  const { title, description, status, id, timer } = props.task;
 
   const onStatusChange = e => {
     const newStatus = e.target.value;
@@ -72,7 +71,9 @@ const Task = props => {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Learn More</Button>
+        <Grid container direction="row" justify="flex-end" alignItems="flex-end">
+          <h4>{timer}</h4>
+        </Grid>
       </CardActions>
     </Card>
   )

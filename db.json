@@ -1,52 +1,11 @@
 {
   "tasks": [
     {
-      "id": 1,
-      "title": "Learn reactjs redux",
-      "description": "Web components, stylesheet, reducers, action, effects",
-      "status": "COMPLETED"
-    },
-    {
-      "title": "test",
-      "description": "test",
-      "status": "INPROGRESS",
-      "id": 2
-    },
-    {
-      "title": "a",
-      "description": "a",
-      "status": "INPROGRESS",
-      "id": 3
-    },
-    {
-      "title": "d",
-      "description": "d",
-      "status": "INPROGRESS",
-      "id": 4
-    },
-    {
-      "title": "f",
-      "description": "f",
-      "status": "INPROGRESS",
-      "id": 5
-    },
-    {
-      "title": "e",
-      "description": "c",
-      "status": "INPROGRESS",
-      "id": 6
-    },
-    {
-      "title": "d",
-      "description": "d",
+      "title": "Learn Redux",
+      "description": "Action, reducers, effects",
       "status": "UNSTARTED",
-      "id": 7
-    },
-    {
-      "title": "d",
-      "description": "d",
-      "status": "UNSTARTED",
-      "id": 8
+      "timer": 0,
+      "id": 1
     }
   ]
 }

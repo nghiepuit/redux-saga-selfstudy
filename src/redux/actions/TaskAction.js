@@ -1,9 +1,9 @@
 import { types } from './TaskActionTypes';
 import * as api from './../../api';
 
-export const createTask = ({title, description, status = 'UNSTARTED'}) => {
+export const createTask = ({title, description, status = 'UNSTARTED', timer = 0}) => {
   return dispatch => {
-    api.createTask({title, description, status})
+    api.createTask({title, description, status, timer})
       .then(res => {
         dispatch(createTaskSuccess(res.data))
       })
